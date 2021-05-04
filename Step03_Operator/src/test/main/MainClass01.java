@@ -11,6 +11,7 @@ public class MainClass01 {
 		// + 연산 하기 
 		int sum = 10 + 1;
 		int sum2 = num1 + num2;
+		
 		int sum3 = 10 + num2;
 		//정수끼리 연산하면 결과는 정수만 나온다. 
 		int result1 = 5 / 3;
