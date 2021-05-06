@@ -14,12 +14,17 @@ public class MainClass02 {
 		Phone p3=p1;
 		//p1 에 담긴 참조값을 Object type 지역변수 p4 에 담기 
 		Object p4=p1;
+		
+		MainClass02.usePhone(p1);
+	}
+
+	public static void usePhone(SmartPhone p) {
+		p.call();
+		// SmartPhone sp=p;
+		SmartPhone sp=(SmartPhone)p;
+		sp.doInternet();
 	}
 }
-
-
-
-
 
 
 
