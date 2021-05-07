@@ -10,6 +10,13 @@ public class MainClass04 {
 				System.out.println("바닥에 구멍을 뚤어요");
 			}
 		});
+		/*
+		 * 람다 함수 -> 위의 소스코드의 약식이다.
+		 * 가능한 경우 구현할 함수가 하나인 것.
+		 * Drill d1=()->{
+			System.out.println();
+		   };
+		 */
 		
 		Drill d1=()->{
 			System.out.println("벽에 20mm 의 구멍내기");
