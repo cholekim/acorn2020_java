@@ -26,6 +26,7 @@ public class MemberDto {
 		this.name = name;
 		this.addr = addr;
 	}
+	
 	//필드에 접근을 할수 있도록 getter, setter 메소드를 만들어 놓는다.
 	public int getNum() {
 		return num;

@@ -6,7 +6,11 @@ import java.util.Map;
 public class MainClass08 {
 	public static void main(String[] args) {
 		/*
-		 *  HashMap<key 값의 type, value 값의 type> 
+		 *  HashMap<key 값의 type, value 값의 type>
+		 *  
+		 *  key의 generic class는 String으로 지정하는 것이 일반적이다.
+		 *  value의 generic class는 담을 데이터 type을 지정하면 된다.
+		 *  여러개의 type을 섞어서 담을거면  Object로 지정하면 된다.
 		 */
 		Map<String, Object> map1=new HashMap<>();
 		map1.put("num", 1);

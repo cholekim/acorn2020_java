@@ -36,7 +36,7 @@ public class MainClass12 {
 		Car car1=new Car("그랜저");
 		set3.add(car1);
 		set3.add(car1);
-	
+
 	}
 }
 
