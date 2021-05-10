@@ -13,11 +13,11 @@ public class MainClass03 {
 		
 		try {
 			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
 		}
 		
-		File f1=new File("c:/acorn2020/myFolder/test.txt");
+		File f1=new File("c:/Users/xogns/Desktop/acorn202104/myFolder/test.txt");
 		try {
 			f1.createNewFile();
 		} catch (IOException e) {
