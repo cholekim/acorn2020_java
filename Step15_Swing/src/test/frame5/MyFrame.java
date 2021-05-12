@@ -1,6 +1,7 @@
 package test.frame5;
 
 import java.awt.Button;
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,6 +22,10 @@ public class MyFrame extends JFrame{
 		//프레임에 버튼 추가하기 ( FlowLayout 의 영향을 받는다 )
 		add(sendBtn);
 		add(removeBtn);
+		
+		Component a=this;
+		// MyFrame a=this;
+		// MyFrame a=MyFrame.this;
 		
 		//ActionListener 인터페이스 type  의 참조값 
 		ActionListener listener=new ActionListener() {
