@@ -13,9 +13,9 @@ public class MainClass17 {
 		
 		try {
 			//파일에서 byte 를 읽어낼 객체 
-			fis=new FileInputStream("c:/acorn2020/myFolder/1.jpg");
+			fis=new FileInputStream("c:/Users/xogns/Desktop/acorn202104/myFolder/1.jpg");
 			//읽어낸 byte 를 출력할 객체 
-			fos=new FileOutputStream("c:/acorn2020/myFolder/copied2.jpg");
+			fos=new FileOutputStream("c:/Users/xogns/Desktop/acorn202104/myFolder/copied2.jpg");
 			//byte 데이터를 읽어낼 방1024 개 짜리 배열객체 생성
 			byte[] buffer=new byte[1024];
 			//반복문 돌면서 읽어내기
