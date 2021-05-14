@@ -35,8 +35,12 @@ public class MainClass06 {
 			//? 에 값 바인딩
 			pstmt.setInt(1, num);
 			//sql 문 실행하기 
-			pstmt.executeUpdate();
-			System.out.println("회원 정보를 삭제 했습니다.");
+			int flag=pstmt.executeUpdate();
+			if(flag>0) {
+				System.out.println("회원 정보를 삭제 했습니다.");
+			}else {
+				System.out.println("삭제 되지 않았습니다.");
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {

@@ -210,6 +210,32 @@ public class MemberDao {
 			return false;
 		}
 	}	
+	
+	public boolean test() {
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		int flag=0;
+		try {
+			conn=new DBConnect().getConn();
+			//실행할 sql(INSERT OR UPDATE OR DELETE)문 작성
+			String sql=" ";
+			pstmt=conn.prepareStatement(sql);
+			// ?에 바인딩할 내용이 있으면 여기서 한다.
+			flag=pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(pstmt!=null)pstmt.close();
+				if(conn!=null)conn.close();
+			}catch(Exception e) {}
+		}
+		if(flag>0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }
 
 
