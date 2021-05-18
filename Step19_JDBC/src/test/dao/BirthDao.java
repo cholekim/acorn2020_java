@@ -33,8 +33,8 @@ public class BirthDao {
 			conn=new DBConnect().getConn();
 			//실행할 sql(INSERT OR UPDATE OR DELETE)문 작성
 			String sql="INSERT INTO birth"
-					+ " (num, name, birth)"
-					+ " VALUES(BIRTH_seq.NEXTVAL, ?, ?)";
+					+ " (num, name, birthday)"
+					+ " VALUES(Birth_seq.NEXTVAL, ?, ?)";
 			pstmt=conn.prepareStatement(sql);
 			//?에 바인딩할 내용이 있으면 여기서 한다.
 			
@@ -71,7 +71,7 @@ public class BirthDao {
 			conn = new DBConnect().getConn();
 			//실행할 sql(INSERT OR UPDATE OR DELETE)문 작성
 			String sql = "UPDATE birth"
-					+ " SET nmae=?, birth=?"
+					+ " SET name=?, birthday=?"
 					+ " WHERE num=?";
 			pstmt = conn.prepareStatement(sql);
 			//?에 바인딩할 내용이 있으면 여기서 한다.
@@ -180,9 +180,9 @@ public class BirthDao {
 		try {
 			conn = new DBConnect().getConn();
 			//실행할 SELECT문
-			String sql = "SELECT num, name, birthday"
+			String sql = "SELECT num, name, TO_CHAR(birthday, 'YYYY.MM.DD') AS birthday"
 					+ " FROM birth"
-					+ " ORDER BY num ASC";;
+					+ " ORDER BY num ASC";
 			pstmt = conn.prepareStatement(sql);
 			
 			rs = pstmt.executeQuery();

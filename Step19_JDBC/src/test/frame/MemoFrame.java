@@ -146,6 +146,7 @@ public class MemoFrame extends JFrame
 	//현재 테이블 cell을 수정중인지 여부를 저장할 필드 
 	boolean isEditing=false;
 	
+	//PropertyChangeListener 인터페이스를 구현해서 강제 오버라이드한 메서드
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
 		System.out.println("property change!");
@@ -162,8 +163,9 @@ public class MemoFrame extends JFrame
 				//DB에 저장하기 
 				MemoDao.getInstance().update(dto);
 				isEditing=false;//수정중이 아니라고 표시한다.
+			}else {
+				isEditing=true;//수정중이라 표시한다.
 			}
-			isEditing=true;//수정중이라 표시한다.
 		}
 	}
 }
